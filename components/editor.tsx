@@ -199,7 +199,7 @@ export const Editor = () => {
           disabled={!imageData}
         >
           <Icons.SolarGalleryRemoveLineDuotone className="mr-2 size-5"></Icons.SolarGalleryRemoveLineDuotone>
-          Process
+          处理
         </Button>
 
         <Button
@@ -209,7 +209,7 @@ export const Editor = () => {
           onClick={handleDownload}
         >
           <Icons.SolarDownloadMinimalisticBoldDuotone className="mr-2 size-5"></Icons.SolarDownloadMinimalisticBoldDuotone>
-          Download
+          下载
         </Button>
       </div>
 
