@@ -67,16 +67,16 @@ export const Editor = () => {
 
         if (key.includes("fetch:"))
           setDialogText(
-            "Downloading AI models. This was a little while ago the first time..."
+            "第一次下载AI模型需要一点时间..."
           )
-        if (key === "compute:inference") setDialogText("Processing image...")
+        if (key === "compute:inference") setDialogText("处理照片中...")
       },
     }
 
     if (imageData) {
       const start = performance.now()
 
-      setDialogText("Starting...")
+      setDialogText("正在开始...")
       setShowDialog(true)
 
       imglyRemoveBackground(imageData!, config).then((blob: Blob) => {
@@ -88,7 +88,7 @@ export const Editor = () => {
         const end = performance.now()
         const time = end - start
         toast.success(
-          `🚀 Successful operation in  ${Math.floor(time / 1000)} s`
+          `🚀 处理成功，用时：  ${Math.floor(time / 1000)} s`
         )
 
         sendGAEvent({ event: "remove-background", value: "success" })
@@ -216,7 +216,7 @@ export const Editor = () => {
       <AlertDialog open={showDialog}>
         <AlertDialogContent>
           <AlertDialogHeader>
-            <AlertDialogTitle>Processing</AlertDialogTitle>
+            <AlertDialogTitle>处理中</AlertDialogTitle>
             <AlertDialogDescription className="flex flex-col gap-2">
               <p>{dialogText}</p>
               {dialogText.includes("Downloading") ? (
