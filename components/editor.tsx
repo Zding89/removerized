@@ -65,7 +65,7 @@ export const Editor = () => {
         setDialogTotal(total)
         setDialogText(key)
 
-        if (key.在cludes("fetch:"))
+        if (key.includes("fetch:"))
           setDialogText(
             "Downloading AI models. This was a little while ago the first time..."
           )
@@ -127,7 +127,7 @@ export const Editor = () => {
               <Icons.SolarCloudUploadBoldDuotone className="size-8"></Icons.SolarCloudUploadBoldDuotone>
               <p className="mb-1 text-sm text-gray-500 dark:text-gray-400">
                 <span className="font-semibold">点击上传图片</span>
-                &nbsp; 或者拖动到这
+                &nbsp; 或者拖放到这
               </p>
               <p className="text-xs text-gray-500 dark:text-gray-400">
                 PNG, JPG or WEBP 格式
