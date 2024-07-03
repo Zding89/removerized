@@ -65,7 +65,7 @@ export const Editor = () => {
         setDialogTotal(total)
         setDialogText(key)
 
-        if (key.includes("fetch:"))
+        if (key.在cludes("fetch:"))
           setDialogText(
             "Downloading AI models. This was a little while ago the first time..."
           )
@@ -126,11 +126,11 @@ export const Editor = () => {
             <div className="flex w-full flex-col items-center justify-center pb-4 pt-3 ">
               <Icons.SolarCloudUploadBoldDuotone className="size-8"></Icons.SolarCloudUploadBoldDuotone>
               <p className="mb-1 text-sm text-gray-500 dark:text-gray-400">
-                <span className="font-semibold">Click to upload</span>
-                &nbsp; or drag and drop
+                <span className="font-semibold">点击上传图片</span>
+                &nbsp; 或者拖动到这
               </p>
               <p className="text-xs text-gray-500 dark:text-gray-400">
-                PNG, JPG or WEBP file
+                PNG, JPG or WEBP 格式
               </p>
             </div>
           </FileInput>
